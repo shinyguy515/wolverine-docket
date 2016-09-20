@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+h1{
+	text-align: center;
+}
+div{
+	text-align:center;
+	font-family: arial;
+	padding: 15px;
+}
+
+p.blocktext {
+	margin-left: auto;
+	margin-right: auto;
+	width: 6em;
+}
+</style>
+
+<h1> {{ building_name }} </h1>
+<div>
+<iframe 
+			width="600"
+			height="450"
+			frameborder="0" style="0"
+			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAfvQUEz4YilDMYUNxbMNa-Uq0g9xLMdiM&q={{ building_name }},Ann+Arbor+Michigan"></iframe>
+</div>
+
+{% endblock %}

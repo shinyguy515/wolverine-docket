@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+div{
+	text-align:center;
+	font-family: arial;
+	padding: 15px;
+}
+</style>
+
+<h1> Instructors </h1>
+
+<a href="/#" class="button">Start Over</a>
+<a href="/specialpage" class="button">Go Back One Step</a>
+
+<div>
+	 <h2>Instructor Info:</h2>
+	 {% for instructor in instructors %}
+	 	<b> Instructor: </b> {{ instructor['InstructorName'] }} <br>
+	 	<b> Role: </b> {{ instructor['InstructorRole'] }} <br>
+	 	 <b> Uniqname: </b> <a href= "mailto:{{ instructor['Uniqname'] }}@umich.edu"> {{ instructor['Uniqname'] }}</a><br><br>
+	 {% endfor %}
+</div>
+
+{% endblock %}

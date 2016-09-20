@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+
+div{
+	text-align:center;
+	font-family: arial;
+	padding: 15px;
+}
+</style>
+
+
+<h1> Subject Picker </h1>
+
+<a href="/#" class="button">Start Over</a>
+
+<div>
+    <h2>Pick a subject:</h2>
+    {% for subject in subjects %}
+    	<a href="/get_catalogs&term_code={{ term_code }}&school={{ school_code }}&subject={{ subject['SubjectCode'] }}">{{ subject['SubjectDescr'] }} </a> <br>
+    {% endfor %}
+</div>
+
+{% endblock %}

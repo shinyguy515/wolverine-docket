@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+
+div{
+	text-align:center;
+	font-family: arial;
+	padding: 15px;
+}
+</style>
+
+<h1> School Picker </h1>
+
+<a href="/#" class="button">Start Over</a>
+
+<div>
+    <h2>Pick a School:</h2>
+    {% for school in schools %}
+    	<a href="/get_subjects&term_code={{ term_code }}&school={{ school['SchoolCode'] }}">{{ school['SchoolDescr'] }} </a> <br>
+    {% endfor %}
+</div>
+
+{% endblock %}

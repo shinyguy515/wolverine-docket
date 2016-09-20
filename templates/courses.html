@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+
+div{
+	text-align:center;
+    font-family: arial;
+    padding: 15px;
+}
+
+
+</style>
+
+<h1> Courses </h1>
+
+<a href="/#" class="button">Start Over</a>
+
+<div>
+    <h2>Here are the course details:</h2>
+    <p class = "blocktext">{{ description }} </p><br>
+    {% for section in sections %}
+    	<b> Section: </b> <a href="/get_sections&term_code={{ term_code }}&school={{ school_code }}&subject={{ subject_code }}&catalog_code={{ catalog_code }}&section_code={{ section['SectionNumber'] }}">{{ section['SectionType'] }} {{ section['SectionNumber'] }} </a> <br>
+    	<b> Waitlist Capacity: </b>{{ section['WaitCapacity']}} <br>
+    	<b> Enrollment Status: </b>{{ section['EnrollmentStatus'] }} <br>
+    	<b> Currently Enrolled: </b>{{ section['EnrollmentTotal']}} <br>
+    	<b> Credit Hours: </b>{{ section['CreditHours']}} <br><br>
+    {% endfor %}
+</div>
+
+{% endblock %}

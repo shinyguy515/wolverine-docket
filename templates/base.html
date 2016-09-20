@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+  <head>
+    {% block head %}
+    <title>Wolverine Docket</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div id= "header" style="margin:auto;">
+    <h1>
+    <img src="http://s13.postimg.org/44ebefm8n/Wolverine_Docket.png" alt="Mountain View" style="width:125px;height:80px" style="float: left; margin: 0 100px 0 0;">
+    The Better Way to Schedule</h1>
+    </div>
+   
+    <div id="content">{% block content %}{% endblock %}</div>
+ 
+    <div id="footer">
+      <img class="resize" src="http://upload.wikimedia.org/wikipedia/commons/b/b6/Panoramic_Michigan_Stadium.jpg">
+      {% block footer %}
+      {% endblock %}
+    </div>
+  </body>
+<body>
+
+</body>
+
+</html>

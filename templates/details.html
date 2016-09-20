@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+
+div{
+	text-align:center;
+	font-family: arial;
+	padding: 15px;
+}
+
+
+
+</style>
+
+<h1> Details</h1>
+
+<a href="/#" class="button">Start Over</a>
+
+<div>
+    <h2>Course details:</h2>
+    {% for detail in details %}
+<<<<<<< HEAD
+		<b> Instructor: </b> <a href="/get_instructors&term_code={{ term_code }}&school={{ school_code }}&subject={{ subject_code }}&catalog_code={{ catalog_code }}&section_code={{ section_code }}"> {{ detail['InstructorName'] }} </a> <div style="float: right"><iframe 
+			width="400"
+			height="250"
+			frameborder="0" style="0"
+			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAfvQUEz4YilDMYUNxbMNa-Uq0g9xLMdiM&q={{ detail['Location'] }},Ann+Arbor+Michigan"></iframe><br><br></div><br>
+		<b> Location: </b> {{ detail['Location'] }} <br>
+		<b> Day & Time: </b> {{ detail['Days'] }} {{ detail['Times'] }} 
+		<p>
+		<b> Topic Description: </b> {{ detail['TopicDescr'] }}</p> <br><br>
+		
+=======
+		<b> Instructor: </b> <a href="/get_instructors&term_code={{ term_code }}&school={{ school_code }}&subject={{ subject_code }}&catalog_code={{ catalog_code }}&section_code={{ section_code }}"> {{ detail['InstructorName'] }} </a><br>
+		<b> Location: </b> <a href="/get_locations&term_code={{ term_code }}&school={{ school_code }}&subject={{ subject_code }}&catalog_code={{ catalog_code }}&section_code={{ section_code }}&location_code={{ detail['Location'] }}">{{ detail['Location'] }} </a><br>
+		<b> Day & Time: </b> {{ detail['Days'] }} {{ detail['Times'] }} 
+		<br>
+		<b> Topic Description: </b> {{ detail['TopicDescr'] }}
+		 <br><br>
+>>>>>>> a5cd1c27e2d91d51709853cf655566fa61ed2b21
+    {% endfor %}
+</div>
+
+{% endblock %}

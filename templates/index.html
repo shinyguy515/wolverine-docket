@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+p {
+	text-align: center;
+}
+
+div{
+	text-align:center;
+	margin:auto;
+}
+</style>
+
+<head>
+	<title> Wolverine Docket</title>
+
+</head>
+
+<h2>Select a Term:</h2>
+
+
+<div class="dropdown" style="align: center;">
+
+    
+    <button>Term</button>
+
+    <!-- dropdown menu -->
+    <ul class="dropdown-menu">
+        {% for term in terms %} 
+		<li><a href="/get_schools&term_code={{ term['TermCode'] }}">{{ term['TermDescr'] }}</a> </li>
+		{% endfor %}
+    </ul>
+</div>
+<br><br> <br>
+{% endblock %}
+
+
+
