@@ -1,6 +1,6 @@
 Team Swipe Right
 
-[Link to our Website](https://wolverine-docket.herokuapp.com/)
+
 
 TEAM MEMBERS
 
